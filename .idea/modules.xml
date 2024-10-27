@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/bank-microservices-domo.iml" filepath="$PROJECT_DIR$/.idea/bank-microservices-domo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/bank-microservices-demo.iml" filepath="$PROJECT_DIR$/.idea/bank-microservices-demo.iml" />
     </modules>
   </component>
 </project>

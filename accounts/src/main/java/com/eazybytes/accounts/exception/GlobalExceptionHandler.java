@@ -36,10 +36,10 @@ public class GlobalExceptionHandler extends ResponseEntityExceptionHandler {
     }
 
 
-    @ExceptionHandler(CustomerExistException.class)
+    @ExceptionHandler(InvalidInputException.class)
     @Order(1)
     public ResponseEntity<ErrorResponseDto> handleCustomerExistException(
-            CustomerExistException customerExistException, WebRequest webRequest){
+            InvalidInputException customerExistException, WebRequest webRequest){
         ErrorResponseDto errorResponseDto = new ErrorResponseDto(
                 webRequest.getDescription(false),
                 HttpStatus.BAD_REQUEST, customerExistException.getMessage(), LocalDateTime.now());

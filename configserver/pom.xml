@@ -69,16 +69,12 @@
 	<build>
 		<plugins>
 			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-			</plugin>
-			<plugin>
 				<groupId>com.google.cloud.tools</groupId>
 				<artifactId>jib-maven-plugin</artifactId>
 				<version>3.4.2</version>
 				<configuration>
 					<to>
-						<image>uexcel247/${project.artifactId}:s6</image>
+						<image>uexcel247/${project.artifactId}:s8</image>
 					</to>
 				</configuration>
 			</plugin>

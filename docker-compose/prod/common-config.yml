@@ -11,10 +11,17 @@ services:
       resources:
         limits:
           memory: 700m
+
+
+  microservice-configserver-eurekaserver-config:
+    extends:
+      service: microservice-configserver-config
+    depends_on:
+      eurekaserver:
+        condition: service_healthy
     environment:
-      SPRING_RABBITMQ_HOST: "rabbit"
-
-
+      SPRING_PROFILES_ACTIVE: prod
+      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: "http://eurekaserver:8070/eureka/"
 
   microservice-configserver-config:
     extends:
@@ -23,5 +30,4 @@ services:
       configserver:
         condition: service_healthy
     environment:
-      SPRING_PROFILES_ACTIVE: prod
       SPRING_CONFIG_IMPORT: "configserver:http://configserver:8071/"

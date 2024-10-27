@@ -113,7 +113,7 @@ public class CardController {
     )
 
     @GetMapping("/fetch")
-    public ResponseEntity<CardDto> updateCard(@RequestParam String mobileNumber) {
+    public ResponseEntity<CardDto> fetchCard(@RequestParam String mobileNumber) {
         iCardService.validateMobileNumber(mobileNumber);
       return   ResponseEntity.ok().body(iCardService.getCardDetails(mobileNumber));
     }
