@@ -4,43 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="552969c1-4788-4b92-9d6e-ceeab1a46bed" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/accounts/src/main/java/com/eazybytes/accounts/controller/CustomerController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/accounts/src/main/java/com/eazybytes/accounts/dto/CardDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/accounts/src/main/java/com/eazybytes/accounts/dto/CustomerDetailsDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/accounts/src/main/java/com/eazybytes/accounts/dto/LoanDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/accounts/src/main/java/com/eazybytes/accounts/service/ICustomerService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/accounts/src/main/java/com/eazybytes/accounts/service/client/CardFeignClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/accounts/src/main/java/com/eazybytes/accounts/service/client/LoanFeignClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/accounts/src/main/java/com/eazybytes/accounts/service/impl/ICustomerServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/card/src/main/java/com/eazybyties/card/dto/LoanDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/bank-microservices-domo.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/src/main/java/com/eazybytes/accounts/AccountsApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/src/main/java/com/eazybytes/accounts/AccountsApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/src/main/java/com/eazybytes/accounts/exception/CustomerExistException.java" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/src/main/java/com/eazybytes/accounts/exception/InvalidInputException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/src/main/java/com/eazybytes/accounts/exception/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/src/main/java/com/eazybytes/accounts/exception/GlobalExceptionHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/src/main/java/com/eazybytes/accounts/mapper/AccountMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/src/main/java/com/eazybytes/accounts/mapper/AccountMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/src/main/java/com/eazybytes/accounts/mapper/CustomerMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/src/main/java/com/eazybytes/accounts/mapper/CustomerMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/src/main/java/com/eazybytes/accounts/service/impl/AccountServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/src/main/java/com/eazybytes/accounts/service/impl/IAccountServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/card/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/card/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/card/src/main/java/com/eazybyties/card/controller/CardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/card/src/main/java/com/eazybyties/card/controller/CardController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/card/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/card/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/configserver/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/configserver/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose/default/common-config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose/default/common-config.yml" afterDir="false" />
+    <list default="true" id="552969c1-4788-4b92-9d6e-ceeab1a46bed" name="Changes" comment="improvements">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker-compose/default/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose/default/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose/prod/common-config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose/prod/common-config.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose/prod/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose/prod/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose/qa/common-config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose/qa/common-config.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose/qa/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose/qa/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/eurekaserver/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/eurekaserver/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/eurekaserver/src/main/java/com/eazybytes/eurekaserver/EurekaserverApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/eurekaserver/src/main/java/com/eazybytes/eurekaserver/EurekaserverApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/eurekaserver/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/eurekaserver/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/loan/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/loan/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/loan/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/loan/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,11 +61,32 @@
       <option name="presentableId" value="Default" />
       <updated>1730045677331</updated>
       <workItem from="1730045677849" duration="1295000" />
-      <workItem from="1730048451287" duration="8084000" />
+      <workItem from="1730048451287" duration="10272000" />
     </task>
+    <task id="LOCAL-00001" summary="improvements">
+      <option name="closed" value="true" />
+      <created>1730058096175</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1730058096175</updated>
+    </task>
+    <task id="LOCAL-00002" summary="improvements">
+      <option name="closed" value="true" />
+      <created>1730058145427</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1730058145427</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="improvements" />
+    <option name="LAST_COMMIT_MESSAGE" value="improvements" />
   </component>
 </project>

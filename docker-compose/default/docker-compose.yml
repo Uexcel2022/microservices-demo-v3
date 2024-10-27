@@ -55,6 +55,17 @@ services:
       file: common-config.yml
       service: microservice-configserver-eurekaserver-config
 
+#  loan1:
+#    image: "uexcel247/loan:s8"
+#    container_name: loan-MS1
+#    ports:
+#      - "8091:8090"
+#    environment:
+#      SPRING_APPLICATION_NAME: "loan"
+#    extends:
+#      file: common-config.yml
+#      service: microservice-configserver-eurekaserver-config
+
 
   card:
     image: "uexcel247/card:s8"
