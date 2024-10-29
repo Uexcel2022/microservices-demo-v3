@@ -4,7 +4,7 @@ import com.eazybyties.loan.dto.LoanDto;
 import com.eazybyties.loan.dto.ResponseDto;
 import com.eazybyties.loan.exception.InvalidArgumentException;
 
-public interface ILoan {
+public interface ILoanService {
     /**
      * @param mobileNumber - A mobil number to create new loan details
      * @return  - Returns response code and message with ResponseDto objection
@@ -37,7 +37,7 @@ public interface ILoan {
         boolean isValid = mobileNumber.matches(("^0[7-9][01][0-9]{8}$"));
         if(!isValid){
             throw new InvalidArgumentException(
-                    String.format("Mobile number %s is invalid", mobileNumber));
+                    String.format("Mobile number %s is not invalid", mobileNumber));
         }
 
     }

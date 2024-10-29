@@ -13,7 +13,9 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.context.request.WebRequest;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
 
+import java.text.SimpleDateFormat;
 import java.time.LocalDateTime;
+import java.util.Date;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
@@ -45,7 +47,7 @@ public class GlobalExceptionHandler extends ResponseEntityExceptionHandler {
     handleResourceNotFoundException(final ResourceNotFoundException e, WebRequest request) {
       ErrorResponseDto notFoundErrorResponse = new ErrorResponseDto(
               request.getDescription(false),HttpStatus.NOT_FOUND,
-              e.getMessage(),LocalDateTime.now());
+              e.getMessage(),getDate());
       return new ResponseEntity<>(notFoundErrorResponse, HttpStatus.NOT_FOUND);
     }
 
@@ -54,7 +56,7 @@ public class GlobalExceptionHandler extends ResponseEntityExceptionHandler {
     handleCardExistException(final UsedMobileNumberException e, WebRequest request) {
         ErrorResponseDto mobileNumberExistsErrorResponse = new ErrorResponseDto(
                 request.getDescription(false),HttpStatus.BAD_REQUEST,
-                e.getMessage(),LocalDateTime.now());
+                e.getMessage(),getDate());
         return new ResponseEntity<>(mobileNumberExistsErrorResponse, HttpStatus.BAD_REQUEST);
     }
 
@@ -63,7 +65,7 @@ public class GlobalExceptionHandler extends ResponseEntityExceptionHandler {
     handleCardNotValidException(final CardNotValidException e, WebRequest request) {
         ErrorResponseDto mobileNumberExistsErrorResponse = new ErrorResponseDto(
                 request.getDescription(false),HttpStatus.BAD_REQUEST,
-                e.getMessage(),LocalDateTime.now());
+                e.getMessage(),getDate());
         return new ResponseEntity<>(mobileNumberExistsErrorResponse, HttpStatus.BAD_REQUEST);
     }
 
@@ -72,7 +74,7 @@ public class GlobalExceptionHandler extends ResponseEntityExceptionHandler {
     handleInvalidArgumentException(final InvalidArgumentException e, WebRequest request) {
         ErrorResponseDto mobileNumberExistsErrorResponse = new ErrorResponseDto(
                 request.getDescription(false),HttpStatus.BAD_REQUEST,
-                e.getMessage(),LocalDateTime.now());
+                e.getMessage(),getDate());
         return new ResponseEntity<>(mobileNumberExistsErrorResponse, HttpStatus.BAD_REQUEST);
     }
 
@@ -82,8 +84,14 @@ public class GlobalExceptionHandler extends ResponseEntityExceptionHandler {
     handleInternalServerError(final Exception e, WebRequest request) {
         ErrorResponseDto mobileNumberExistsErrorResponse = new ErrorResponseDto(
                 request.getDescription(false),HttpStatus.INTERNAL_SERVER_ERROR,
-                e.getMessage(),LocalDateTime.now());
+                e.getMessage(),getDate());
         return new ResponseEntity<>(mobileNumberExistsErrorResponse, HttpStatus.INTERNAL_SERVER_ERROR);
+    }
+
+
+    public String getDate(){
+        SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSSZ");
+        return formatter.format(new Date());
     }
 
 

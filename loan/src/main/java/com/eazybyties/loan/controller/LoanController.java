@@ -5,7 +5,7 @@ import com.eazybyties.loan.dto.ErrorResponseDto;
 import com.eazybyties.loan.dto.LoanContactInfoDto;
 import com.eazybyties.loan.dto.LoanDto;
 import com.eazybyties.loan.dto.ResponseDto;
-import com.eazybyties.loan.service.ILoan;
+import com.eazybyties.loan.service.ILoanService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.Schema;
@@ -34,15 +34,15 @@ import java.util.Map;
 @RequestMapping(value = "/api",produces = MediaType.APPLICATION_JSON_VALUE)
 @Validated
 public class LoanController {
-    private final ILoan iloan;
+    private final ILoanService iLoanService;
     private final LoanContactInfoDto loanContactInfoDto;
     private final Environment env;
 
     @Value("${build.version}")
     private String buildVersion;
 
-    public LoanController(ILoan iloan, LoanContactInfoDto loanContactInfoDto, Environment env) {
-        this.iloan = iloan;
+    public LoanController(ILoanService iLoanService, LoanContactInfoDto loanContactInfoDto, Environment env) {
+        this.iLoanService = iLoanService;
         this.loanContactInfoDto = loanContactInfoDto;
         this.env = env;
     }
@@ -74,9 +74,9 @@ public class LoanController {
 
     @PostMapping("/create")
     public ResponseEntity<ResponseDto> createLoanDetails(@RequestParam String mobileNumber){
-        iloan.validateMobileNumber(mobileNumber);
+        iLoanService.validateMobileNumber(mobileNumber);
         return ResponseEntity.status(HttpStatus.CREATED)
-                .body(iloan.createLoanDetails(mobileNumber));
+                .body(iLoanService.createLoanDetails(mobileNumber));
     }
     @Operation(
             summary = "REST API to Fetch Loan Details",
@@ -119,8 +119,8 @@ public class LoanController {
 
     @GetMapping("/fetch")
     public ResponseEntity<LoanDto> getLoanDetails(@RequestParam String mobileNumber){
-        iloan.validateMobileNumber(mobileNumber);
-       return ResponseEntity.ok().body(iloan.fetchLoanDetails(mobileNumber));
+        iLoanService.validateMobileNumber(mobileNumber);
+       return ResponseEntity.ok().body(iLoanService.fetchLoanDetails(mobileNumber));
     }
 
     @Operation(
@@ -173,7 +173,7 @@ public class LoanController {
 
     @PutMapping("/update")
     public ResponseEntity<ResponseDto> updateLoanDetails(@Valid @RequestBody LoanDto loanDto){
-        boolean success = iloan.updateLoanDetails(loanDto);
+        boolean success = iLoanService.updateLoanDetails(loanDto);
         if(success){
             return ResponseEntity.ok()
                     .body(new ResponseDto(
@@ -236,8 +236,8 @@ public class LoanController {
 
     @DeleteMapping("/delete")
     public ResponseEntity<ResponseDto> deleteLoanDetails(@RequestParam String mobileNumber){
-        iloan.validateMobileNumber(mobileNumber);
-        boolean success = iloan.deleteLoanDetails(mobileNumber);
+        iLoanService.validateMobileNumber(mobileNumber);
+        boolean success = iLoanService.deleteLoanDetails(mobileNumber);
         if(success){
             return ResponseEntity.ok()
                     .body(new ResponseDto(

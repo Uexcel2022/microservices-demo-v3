@@ -1,6 +1,7 @@
 package com.eazybytes.accounts.exception;
 
 import com.eazybytes.accounts.dto.ErrorResponseDto;
+import lombok.Data;
 import org.springframework.core.annotation.Order;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
@@ -13,7 +14,9 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 import org.springframework.web.context.request.WebRequest;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
 
+import java.text.SimpleDateFormat;
 import java.time.LocalDateTime;
+import java.util.Date;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
@@ -42,7 +45,7 @@ public class GlobalExceptionHandler extends ResponseEntityExceptionHandler {
             InvalidInputException customerExistException, WebRequest webRequest){
         ErrorResponseDto errorResponseDto = new ErrorResponseDto(
                 webRequest.getDescription(false),
-                HttpStatus.BAD_REQUEST, customerExistException.getMessage(), LocalDateTime.now());
+                HttpStatus.BAD_REQUEST, customerExistException.getMessage(), getDate());
         return new ResponseEntity<>(errorResponseDto, HttpStatus.BAD_REQUEST);
     }
 
@@ -52,7 +55,7 @@ public class GlobalExceptionHandler extends ResponseEntityExceptionHandler {
             ResourceNotFoundException customerNotFoundException, WebRequest webRequest){
         ErrorResponseDto errorResponseDto = new ErrorResponseDto(
                 webRequest.getDescription(false),
-                HttpStatus.NOT_FOUND, customerNotFoundException.getMessage(), LocalDateTime.now());
+                HttpStatus.NOT_FOUND, customerNotFoundException.getMessage(), getDate());
         return new ResponseEntity<>(errorResponseDto, HttpStatus.NOT_FOUND);
     }
 
@@ -62,7 +65,12 @@ public class GlobalExceptionHandler extends ResponseEntityExceptionHandler {
             Exception exception, WebRequest webRequest){
         ErrorResponseDto errorResponseDto = new ErrorResponseDto(
                 webRequest.getDescription(false),
-                HttpStatus.INTERNAL_SERVER_ERROR, exception.getMessage(), LocalDateTime.now());
+                HttpStatus.INTERNAL_SERVER_ERROR, exception.getMessage(), getDate());
         return new ResponseEntity<>(errorResponseDto, HttpStatus.INTERNAL_SERVER_ERROR);
+    }
+
+    public String getDate(){
+        SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSSZ");
+        return formatter.format(new Date());
     }
 }

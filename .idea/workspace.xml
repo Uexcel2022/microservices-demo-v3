@@ -5,8 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="552969c1-4788-4b92-9d6e-ceeab1a46bed" name="Changes" comment="improvements">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose/default/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose/default/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/src/main/java/com/eazybytes/accounts/controller/AccountsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/src/main/java/com/eazybytes/accounts/controller/AccountsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/src/main/java/com/eazybytes/accounts/dto/ErrorResponseDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/src/main/java/com/eazybytes/accounts/dto/ErrorResponseDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/src/main/java/com/eazybytes/accounts/exception/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/src/main/java/com/eazybytes/accounts/exception/GlobalExceptionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/src/main/java/com/eazybytes/accounts/service/IAccountService.java" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/src/main/java/com/eazybytes/accounts/service/IAccountService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/card/src/main/java/com/eazybyties/card/controller/CardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/card/src/main/java/com/eazybyties/card/controller/CardController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/card/src/main/java/com/eazybyties/card/dto/ErrorResponseDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/card/src/main/java/com/eazybyties/card/dto/ErrorResponseDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/card/src/main/java/com/eazybyties/card/exception/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/card/src/main/java/com/eazybyties/card/exception/GlobalExceptionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/loan/src/main/java/com/eazybyties/loan/controller/LoanController.java" beforeDir="false" afterPath="$PROJECT_DIR$/loan/src/main/java/com/eazybyties/loan/controller/LoanController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/loan/src/main/java/com/eazybyties/loan/dto/ErrorResponseDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/loan/src/main/java/com/eazybyties/loan/dto/ErrorResponseDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/loan/src/main/java/com/eazybyties/loan/exception/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/loan/src/main/java/com/eazybyties/loan/exception/GlobalExceptionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/loan/src/main/java/com/eazybyties/loan/service/ILoan.java" beforeDir="false" afterPath="$PROJECT_DIR$/loan/src/main/java/com/eazybyties/loan/service/ILoanService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/loan/src/main/java/com/eazybyties/loan/service/impl/LoanServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/loan/src/main/java/com/eazybyties/loan/service/impl/LoanServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,6 +28,22 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Uexcel2022&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Uexcel2022/microservices-demo-v3.git&quot;,
+    &quot;accountId&quot;: &quot;47e692d2-df7c-402d-b70d-eb7c509ee2d0&quot;
+  }
+}</component>
+  <component name="KubernetesApiPersistence"><![CDATA[{}]]></component>
+  <component name="KubernetesApiProvider"><![CDATA[{
+  "isMigrated": true
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 0
 }</component>
@@ -26,15 +54,25 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "Spring Boot.AccountsApplication.executor": "Run",
+    "Spring Boot.CardApplication.executor": "Run",
+    "Spring Boot.ConfigServerApplication.executor": "Run",
+    "Spring Boot.EurekaserverApplication.executor": "Run",
+    "Spring Boot.LoanApplication.executor": "Run",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/bank-microservices-demo/docker-compose/qa",
+    "last_opened_file_path": "C:/EazyBytes-microsevices-folder/bank-microservices-demo-v3",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "run.configurations.included.in.services": "true",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -43,6 +81,94 @@
       <recent name="C:\bank-microservices-demo\docker-compose\qa" />
       <recent name="C:\bank-microservices-demo\docker-compose\prod" />
     </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="MicronautRunConfigurationType" />
+        <option value="QuarkusRunConfigurationType" />
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.LoanApplication">
+    <configuration name="AccountsApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <module name="accounts" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.eazybytes.accounts.AccountsApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.eazybytes.accounts.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CardApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <module name="card" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.eazybyties.card.CardApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.eazybyties.card.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ConfigServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="configserver" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.eazybytes.configserver.ConfigServerApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.eazybytes.configserver.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EurekaserverApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="eurekaserver" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.eazybytes.eurekaserver.EurekaserverApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.eazybytes.eurekaserver.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LoanApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <module name="loan" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.eazybyties.loan.LoanApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.eazybyties.loan.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Spring Boot.LoanApplication" />
+        <item itemvalue="Spring Boot.CardApplication" />
+        <item itemvalue="Spring Boot.AccountsApplication" />
+        <item itemvalue="Spring Boot.EurekaserverApplication" />
+        <item itemvalue="Spring Boot.ConfigServerApplication" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -61,7 +187,8 @@
       <option name="presentableId" value="Default" />
       <updated>1730045677331</updated>
       <workItem from="1730045677849" duration="1295000" />
-      <workItem from="1730048451287" duration="10272000" />
+      <workItem from="1730048451287" duration="11982000" />
+      <workItem from="1730157468703" duration="3057000" />
     </task>
     <task id="LOCAL-00001" summary="improvements">
       <option name="closed" value="true" />
@@ -79,11 +206,30 @@
       <option name="project" value="LOCAL" />
       <updated>1730058145427</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="improvements">
+      <option name="closed" value="true" />
+      <created>1730063056166</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1730063056166</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="improvements" />

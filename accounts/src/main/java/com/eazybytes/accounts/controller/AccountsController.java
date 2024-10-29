@@ -5,6 +5,7 @@ import com.eazybytes.accounts.dto.AccountsContactInfoDto;
 import com.eazybytes.accounts.dto.CustomerDto;
 import com.eazybytes.accounts.dto.ErrorResponseDto;
 import com.eazybytes.accounts.dto.ResponseDto;
+import com.eazybytes.accounts.exception.InvalidInputException;
 import com.eazybytes.accounts.service.IAccountService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.Content;
@@ -98,12 +99,10 @@ public class AccountsController {
     )
 
     @GetMapping("/fetch-customer")
-    public ResponseEntity<CustomerDto> updateAccount(@Valid @RequestParam("mobileNumber")
-                                                         @Pattern(regexp = "0[7-9][01][0-9]{8}",
-                                                                 message = "Not a valid Nigeria mobile number")
-                                                         String mobileNumber
-    ){
-
+    public ResponseEntity<CustomerDto> fetchAccount(@Valid @RequestParam String mobileNumber){
+        if(!iAccountService.validateMobileNumber(mobileNumber)){
+            throw new InvalidInputException("Mobile number "+ mobileNumber + " is not valid" );
+        }
         return ResponseEntity.ok().body(iAccountService.getCustomerByMobileNumber(mobileNumber));
     }
 
@@ -178,10 +177,10 @@ public class AccountsController {
 
     )
     @DeleteMapping("/delete-account")
-    public ResponseEntity<ResponseDto> deleteAccount(@RequestParam("mobileNumber")
-                                                         @Pattern(regexp = "^0[7-9][01][0-9]{8}$", message = "Invalid mobile number")
-                                                         String mobileNumber
-    ){
+    public ResponseEntity<ResponseDto> deleteAccount(@RequestParam("mobileNumber") String mobileNumber){
+        if(!iAccountService.validateMobileNumber(mobileNumber)){
+            throw new InvalidInputException("Mobile number "+mobileNumber+" is not valid");
+        }
             Boolean isDeleted = iAccountService.deleteCustomer(mobileNumber);
         if (isDeleted) {
             return ResponseEntity.ok()

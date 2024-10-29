@@ -44,4 +44,8 @@ public interface IAccountService {
         newAccount.setBranchAddress(AccountConstants.ADDRESS);
         return newAccount;
     }
+
+    default boolean  validateMobileNumber(String mobileNumber) {
+          return mobileNumber.matches("^0[7-9][01][0-9]{8}$");
+    }
 }

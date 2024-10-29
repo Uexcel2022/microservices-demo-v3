@@ -161,7 +161,7 @@ public class CardController {
     )
 
     @PutMapping("/update")
-    public ResponseEntity<ResponseDto> update(@Valid @RequestBody CardDto cardDto) {
+    public ResponseEntity<ResponseDto> updateCard(@Valid @RequestBody CardDto cardDto) {
         boolean success = iCardService.updateCardDetails(cardDto);
         if (success) {
             return ResponseEntity.ok().body(new ResponseDto(

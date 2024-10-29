@@ -8,7 +8,7 @@ import com.eazybyties.loan.exception.MobileNumberExistException;
 import com.eazybyties.loan.exception.ResourceNotFoundException;
 import com.eazybyties.loan.mapper.LoanMapper;
 import com.eazybyties.loan.repository.LoanRepository;
-import com.eazybyties.loan.service.ILoan;
+import com.eazybyties.loan.service.ILoanService;
 import jakarta.transaction.Transactional;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -17,7 +17,7 @@ import org.springframework.stereotype.Service;
 @AllArgsConstructor
 @Service
 @Transactional
-public class LoanServiceImpl implements ILoan {
+public class LoanServiceImpl implements ILoanService {
     private final LoanRepository loanRepository;
     /**
      * @param mobileNumber - A mobil number to create new loan details

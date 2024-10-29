@@ -13,7 +13,9 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 import org.springframework.web.context.request.WebRequest;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
 
+import java.text.SimpleDateFormat;
 import java.time.LocalDateTime;
+import java.util.Date;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
@@ -44,7 +46,7 @@ public class GlobalExceptionHandler extends ResponseEntityExceptionHandler {
             final MobileNumberExistException e, final WebRequest request){
         return ResponseEntity.status(HttpStatus.BAD_REQUEST)
                 .body(new ErrorResponseDto(request.getDescription(false),
-                        HttpStatus.BAD_REQUEST, e.getMessage(), LocalDateTime.now()
+                        HttpStatus.BAD_REQUEST, e.getMessage(), getDate()
                 ));
     }
 
@@ -53,7 +55,7 @@ public class GlobalExceptionHandler extends ResponseEntityExceptionHandler {
             final ResourceNotFoundException e, final WebRequest request){
         return ResponseEntity.status(HttpStatus.NOT_FOUND)
                 .body(new ErrorResponseDto(request.getDescription(false),
-                        HttpStatus.NOT_FOUND, e.getMessage(), LocalDateTime.now()
+                        HttpStatus.NOT_FOUND, e.getMessage(), getDate()
                 ));
     }
 
@@ -62,7 +64,7 @@ public class GlobalExceptionHandler extends ResponseEntityExceptionHandler {
             final InvalidArgumentException e, final WebRequest request){
         return ResponseEntity.status(HttpStatus.BAD_REQUEST)
                 .body(new ErrorResponseDto(request.getDescription(false),
-                        HttpStatus.BAD_REQUEST, e.getMessage(), LocalDateTime.now()
+                        HttpStatus.BAD_REQUEST, e.getMessage(), getDate()
                 ));
     }
 
@@ -71,10 +73,13 @@ public class GlobalExceptionHandler extends ResponseEntityExceptionHandler {
             final Exception e, final WebRequest request){
         return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
                 .body(new ErrorResponseDto(request.getDescription(false),
-                        HttpStatus.INTERNAL_SERVER_ERROR, e.getMessage(), LocalDateTime.now()
+                        HttpStatus.INTERNAL_SERVER_ERROR, e.getMessage(), getDate()
                 ));
     }
 
-
+    public String getDate(){
+        SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSSZ");
+        return formatter.format(new Date());
+    }
 
 }
